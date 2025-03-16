@@ -1,0 +1,406 @@
+/* Root variables for easy theme customization */
+:root {
+    --brand-color: #44a363; /* Brand color */
+    --dark-overlay: rgba(0, 0, 0, 0.5);
+    --light-text: #ffffff;
+}
+
+/* Global Styles */
+body {
+    background: url('websiteimg1.jpg') no-repeat center center/cover;
+    color: var(--light-text);
+    font-family: 'Eras Medium ITC', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    cursor: url('mouse.svg'), auto;
+}
+
+/* Custom Cursor for Interactive Elements */
+a, button, .btn-primary, .navbar-nav .nav-link {
+    cursor: url('mouse.svg'), pointer;
+}
+
+input, textarea {
+    cursor: text;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 100vh;
+    background: var(--dark-overlay);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    opacity: 1; /* Ensures text stays visible */
+    animation: none; /* Prevents fade-out effect */
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    opacity: 1; /* Ensures it never disappears */
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: var(--brand-color);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: #3d8b5e;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Floating Form Fields */
+.form-floating input, .form-floating textarea {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-floating input:focus, .form-floating textarea:focus {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    height: 70px;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand img {
+    height: 35px;
+    width: auto;
+}
+
+.navbar-toggler {
+    padding: 5px;
+    height: 35px;
+}
+
+.navbar-nav .nav-link {
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--brand-color) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--brand-color);
+}
+
+/* SERVICE CARDS */
+.service-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.377);
+
+}
+/* Services Section - Adjust Overall Spacing */
+#services h2 {
+    margin-bottom: 20px; /* Reduce space below "Our Services" */
+}
+
+/* Service Cards - Reduce Spacing Between Elements */
+.service-card {
+    padding: 15px; /* Reduce padding inside the card */
+}
+
+.service-card i {
+    margin-bottom: 8px; /* Reduce space below the icon */
+    font-size: 2rem; /* Adjust icon size */
+}
+
+.service-card h5 {
+    margin-bottom: 5px; /* Reduce space below the title */
+    font-size: 1.2rem; /* Adjust font size */
+}
+
+.service-card p {
+    margin-top: 3px; /* Reduce space above the paragraph */
+    margin-bottom: 0; /* Remove unnecessary bottom space */
+    font-size: 0.95rem; /* Adjust text size */
+}
+
+/* Row - Reduce Gaps Between Cards */
+.row.g-4 {
+    --bs-gutter-y: 20px; /* Adjust vertical spacing between rows */
+}
+
+/* Hover Effect */
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.384);
+}
+
+/* Icons for Services */
+.service-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: var(--brand-color); /* Uses your theme color */
+}
+
+/* Center the About Us Section */
+#about-us {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers horizontally */
+    justify-content: center; /* Centers vertically */
+    min-height: 50vh; /* Adjusts the height */
+}
+
+/* Adjust About Us Shape */
+.about-shape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Style the Heading */
+.about-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: hsl(0, 0%, 100%);
+}
+
+/* Style the Paragraph */
+.about-text {
+    max-width: 800px; /* Limits text width */
+    margin: 10px auto; /* Centers text */
+    font-size: 1.2rem;
+    color: #fdfdfd;
+    line-height: 1.6;
+}
+/* Apply Blur Shadow to About Us Heading */
+.about-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff; /* Adjust color based on background */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); /* Blurred shadow */
+}
+
+/* Apply Blur Shadow to About Us Text */
+.about-text {
+    font-size: 1.2rem;
+    color: #fff; /* Ensure readability */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Blurred shadow */
+    max-width: 800px; /* Limits text width */
+    margin: 10px auto; /* Centers text */
+    line-height: 1.6;
+}
+
+
+
+/* FOOTER */
+footer {
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* SMOOTH SCROLL */
+.smooth-scroll {
+    scroll-behavior: smooth;
+}
+
+/* ANIMATIONS MOVING BACKGROUND */
+@keyframes moveBackground {
+    0% { background-position: center top; }
+    45% { background-position: center bottom; } /* Move down */
+    55% { background-position: center bottom; } /* Stay down for 15s */
+    100% { background-position: center top; } /* Move back up */
+}
+
+.moving-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('websiteimg1.jpg') no-repeat center center;
+    background-size: cover; /* Adjust this if it's still zoomed */
+    z-index: -1;
+    animation: moveBackground 30s infinite ease-in-out;
+}
+/* about.html bottom footer always */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/* allow mouse.svg to be active on entire screen */
+.about-section {
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    padding: 50px 0;
+}
+
+.about-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    max-width: 800px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+/* get in touch shift up */
+#contact {
+    padding-bottom: 100px; /* Increase if still overlapping */
+}
+/* ✅ Preloader covers the entire screen */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000; /* Change background if needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* ✅ Preloader (Full Page Cover) */
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000; /* Change to match your design */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Ensures it's above other content */
+}
+
+/* ✅ Loader Container (Holds the Bar & Mouse) */
+#loader-container {
+    position: relative;
+    width: 60%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* ✅ Loading Bar (Fills from left to right) */
+#loader-bar {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #44a363; /* Change to match your brand color */
+    transition: width 0.2s ease-in-out;
+}
+
+/* Logo Slideshow */
+.logo-carousel {
+    overflow: hidden;
+    width: 100%; /* Full width */
+    margin: auto;
+    position: relative;
+    padding: 20px 0;
+}
+
+.carousel-track {
+    display: flex;
+    align-items: center; /* Ensure logos align properly */
+    gap: 80px; /* Space between logos */
+    animation: slideLogos 30s linear infinite; /* Increase duration to 30s */
+    width: 100%; /* Full width */
+}
+
+/* Ensure logos are correctly sized */
+.carousel-track img {
+    height: 300px; /* Increase height */
+    width: auto;
+    max-width: 600px; /* Increase max-width */
+    object-fit: contain; /* Keep aspect ratio */
+    filter: none; /* Remove grayscale effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Slight scale-up effect on hover */
+.carousel-track img:hover {
+    transform: scale(1.1);
+}
+
+/* Animation for infinite scrolling */
+@keyframes slideLogos {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+/* Adjust the animation duration to slow down the slide time */
+.carousel-track {
+    display: flex;
+    align-items: center; /* Ensure logos align properly */
+    gap: 80px; /* Space between logos */
+    animation: slideLogos 30s linear infinite; /* Increase duration to 30s */
+    width: max-content;
+}
+/* Black Blur Background for Readability for services.html page */
+.text-overlay {
+    background: rgba(0, 0, 0, 0.6); /* Black with 60% transparency */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block; /* Only covers text, not the full width */
+    backdrop-filter: blur(5px); /* Adds a slight blur effect */
+    color: white; /* Ensures text is readable */
+}
+/* Darker Background for Readability (ONLY on services.html) */
+.services-page {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('websiteimg1.jpg') no-repeat center center/cover;
+    color: white; /* Ensures text stays readable */
+}
+
+
+
+
+
+
+
